@@ -1,8 +1,6 @@
 // src/components/Footer.js
-import styles from "../styles/layout.module.css";
-
 const Footer = () => (
-  <footer className={styles.footer}>
+  <footer className="bg-gray-800 text-white text-center p-4">
     <p>&copy; {new Date().getFullYear()} My App</p>
   </footer>
 );
