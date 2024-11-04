@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full flex justify-between items-center p-4 bg-sky-950">
+      <nav className="w-full flex justify-between items-center p-4 bg-sky-950">
         <div className="text-xl font-extrabold">Logo</div>
         <div className="space-x-4 mr-2 hidden md:flex font-bold">
           <div>
@@ -49,7 +49,7 @@ const Navbar = () => {
         </div>
       </nav>
       {isMenuOpen && (
-        <div className="absolute top-16 bg-sky-950 mt-1 w-full flex flex-col md:hidden space-y-2 p-1 items-center">
+        <div className="top-16 bg-sky-950 mt-1 w-full flex flex-col md:hidden space-y-2 p-1 items-center">
           <div className="border border-indigo-900 w-full text-center p-1">
             <Link href="#" className="hover:text-gray-400">
               Home
