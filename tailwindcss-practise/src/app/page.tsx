@@ -3,6 +3,7 @@
 import Navbar from "@/app/components/Navbar";
 import Sidebar from "@/app/components/Sidebar";
 import CardGroup from "@/app/components/Cards";
+import Footer from "@/app/components/Footer";
 export default function Home() {
   return (
     <>
@@ -28,6 +29,7 @@ export default function Home() {
           </main>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
