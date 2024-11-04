@@ -1,8 +1,11 @@
 "use client";
+
+import Navbar from "@/app/components/Navbar";
 export default function Home() {
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-black">
+      <Navbar />
+      <div className="flex items-center justify-center min-h-screen bg-black flex-col md:flex-row">
         <h1 className="font-bold text-green-500 m-4">
           Welcome to Tailwind CSS
         </h1>
