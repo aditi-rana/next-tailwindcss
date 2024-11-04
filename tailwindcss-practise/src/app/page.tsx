@@ -2,7 +2,7 @@
 
 import Navbar from "@/app/components/Navbar";
 import Sidebar from "@/app/components/Sidebar";
-import CardGroup from "@/app/components/Cards";
+import CardGroup from "@/app/components/CardGroup";
 import Footer from "@/app/components/Footer";
 export default function Home() {
   return (
