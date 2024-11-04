@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className="md:w-64 bg-sky-950 w-12">
+      <aside className="md:w-64 bg-sky-950 w-12 mr-1">
         <div className="hidden md:block mt-4">
           <div className="border-b border-zinc-500 w-full text-center p-1">
             <Link href="#" className="hover:text-gray-400">
@@ -28,7 +28,7 @@ const Sidebar = () => {
             </Link>
           </div>
         </div>
-        <div className="text-center md:hidden">{">>"}</div>
+        <div className="text-center md:hidden mt-4 font-extrabold">{">>"}</div>
       </aside>
     </>
   );
