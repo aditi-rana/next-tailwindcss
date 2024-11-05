@@ -1,12 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowSidebar(window.innerWidth >= 640);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleNav = () => {
     setShowNav(!showNav);
+  };
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
   };
 
   return (
@@ -63,8 +77,34 @@ export default function Home() {
           </div>
         </nav>
         <div className="flex flex-1">
-          <aside className="mt-px bg-amber-950 w-64 min-h-full text-white p-4">
-            Sidebar
+          <aside
+            className="mt-px bg-amber-950 min-h-full text-white p-4
+          flex flex-col justify-between"
+          >
+            <div
+              className={`w-64 text-center ${showSidebar ? "block" : "hidden"}`}
+            >
+              <div className="border-b border-b-zinc-500 p-2 rounded">
+                Page 1
+              </div>
+              <div className="border-b border-b-zinc-500 p-2 rounded">
+                Page 2
+              </div>
+              <div className="border-b border-b-zinc-500 p-2 rounded">
+                Page 3
+              </div>
+              <div className="border-b border-b-zinc-500 p-2 rounded">
+                Page 4
+              </div>
+              <div className="border-b border-b-zinc-500 p-2 rounded">
+                Page 5
+              </div>
+            </div>
+            <div className="text-right px-2 text-xl font-extrabold">
+              <button onClick={toggleSidebar}>
+                {showSidebar ? "<<" : ">>"}
+              </button>
+            </div>
           </aside>
           <main className="m-px flex-1 bg-red-200">
             {showNav && (
@@ -73,7 +113,9 @@ export default function Home() {
                 <div className="">Aditi Rana</div>
               </div>
             )}
-            Content
+            <div className="flex items-center justify-center text-2xl font-extrabold h-full">
+              <div>Page Content</div>
+            </div>
           </main>
         </div>
         <footer className="mt-px bg-amber-950 text-white p-4 flex flex-col space-y-2 items-center md:flex-row md:justify-around">
