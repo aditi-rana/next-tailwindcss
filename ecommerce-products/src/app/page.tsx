@@ -26,7 +26,9 @@ export default function Home() {
                 <div className="">Aditi Rana</div>
               </div>
             )}
-            <CardGroup />
+            <div className="flex justify-center h-full">
+              <CardGroup />
+            </div>
           </main>
         </div>
         <Footer />

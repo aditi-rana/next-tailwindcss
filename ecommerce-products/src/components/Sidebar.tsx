@@ -5,7 +5,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setShowSidebar(window.innerWidth >= 640);
+      if (window.innerWidth <= 640) setShowSidebar(false);
     };
     window.addEventListener("resize", handleResize);
     return () => {
