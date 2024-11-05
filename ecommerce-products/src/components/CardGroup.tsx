@@ -14,7 +14,7 @@ type ProductType = {
 
 const CardGroup: FC<{ products: ProductType[] }> = ({ products }) => {
   return (
-    <div className="flex flex-wrap justify-center h-full p-8 gap-6">
+    <div className="flex flex-wrap justify-center h-screen p-8 gap-6 overflow-y-scroll">
       {products.map((product) => (
         <Card key={product.id} product={product} />
       ))}
