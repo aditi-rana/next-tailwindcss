@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className="md:w-64 bg-sky-950 w-12 mr-1">
+      <aside className="md:w-64 bg-sky-950 w-12 mr-1 text-white font-bold">
         <div className="hidden md:block mt-4">
           <div className="border-b border-zinc-500 w-full text-center p-1">
             <Link href="#" className="hover:text-gray-400">
