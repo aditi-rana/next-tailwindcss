@@ -76,7 +76,13 @@ export default function Home() {
             Content
           </main>
         </div>
-        <footer className="mt-p bg-amber-950 text-white p-4">Footer</footer>
+        <footer className="mt-px bg-amber-950 text-white p-4 flex flex-col space-y-2 items-center md:flex-row md:justify-around">
+          <div>c 2024 foundation</div>
+          <div className="flex space-x-8">
+            <div>About</div>
+            <div>Contact</div>
+          </div>
+        </footer>
       </div>
     </>
   );
