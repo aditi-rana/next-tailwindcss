@@ -12,7 +12,7 @@ type ProductType = {
 
 const Card = ({ product }: { product: ProductType }) => {
   return (
-    <div className="flex-none rounded h-96 w-72 bg-amber-900">
+    <div className="flex-none rounded h-96 w-72 bg-amber-900 hover:scale-105 hover:shadow-lg">
       <div>
         <img
           className="h-64 w-full object-cover rounded p-2"
